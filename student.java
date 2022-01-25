@@ -1,33 +1,42 @@
-package dee;
-
-import java.util.Scanner;
+package functionoverload;
 
 public class student {
-public static void main(String[]args)
-{
-	
-	String name;
-	float marks;
-	Scanner sc = new Scanner (System.in);
 	
 	
-	System.out.println("Enter your name");
-	name= sc.next();
-	System.out.println("your name is " +name);
-	
-	System.out.println("Enter your marks");
-	marks = sc.nextFloat();
-	System.out.println("Enter your marks");
-	
-
-	System.out.println("Name = "+name);
-	System.out.println("marks = "+marks);
-	System.out.println("avg = "+marks/5);
-	
-
-}
-}
-
-	
-	
-
+	    private int studentId;
+	    private String studentName, studentAddress, collegeName;
+	    
+	    public void Student(int studentId, String studentName, String studentAddress)
+	    {
+	        this.studentAddress=studentAddress;
+	        this.studentName=studentName;
+	        this.studentId=studentId;
+	        this.collegeName="NIT";
+	    }
+	    
+	    public void Student(int studentId, String studentName, String studentAddress, String collegeName)
+	    {
+	       
+	        this.collegeName=collegeName;
+	    }
+	    
+	    public int getStudentId()
+	    {
+	        return this.studentId;
+	    }
+	    
+	    public String getStudentName()
+	    {
+	        return this.studentName;
+	    }
+	    
+	    public String getStudentAddress()
+	    {
+	        return this.studentAddress;
+	    }
+	    
+	    public String getCollegeName()
+	    {
+	        return this.collegeName;
+	    }
+	}
