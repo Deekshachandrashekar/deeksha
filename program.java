@@ -1,23 +1,31 @@
-package dee;
+package arrays;
 import java.util.Scanner;
-public class program{
-	public static void main(String[]args)
+
+public class program {
+	public static void main(String []args)
 	{
-		int num;
-		Scanner sc = new Scanner (System.in);
-		System.out.println("Enter the num");
-		num = sc.nextInt();
+		int a[] [] = new int [4][3];
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter  4*3 matrix");
 		
-		switch(num%2)
+		for(int i=0;i<4;i++)
 		{
-		case 0 :
-			System.out.println(num+ " is a even num");
-			break;
+			for (int j=0;j<3;j++)
+			{
+				a[i][j]=sc.nextInt();
+			}
+		}
 		
-		case 1 :
-			System.out.println(num +" is odd ");
-			break;
-	}
+		for(int i=0;i<4;i++)
+		{
+			for (int j=0;j<3;j++)
+			{
+					System.out.print(a[i][j]);
+			}
+		}
 	}
 }
+		
+	
+
 
